@@ -95,13 +95,10 @@
     nav a { color: var(--muted); text-decoration: none; }
     nav a:hover { color: var(--fg); }
     .hero-band {
-      margin: 0 -1.25rem;
       position: relative;
       border-bottom: 1px solid var(--line);
       background: #05060a;
-    }
-    @media (min-width: 1120px) {
-      .hero-band { margin: 0; border: 1px solid var(--line); border-top: none; }
+      overflow: hidden;
     }
     .hero-band img {
       display: block;
@@ -380,9 +377,7 @@
           <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
           <span>showcase-2min.mp4</span>
         </div>
-        <video id="player" class="hidden" controls playsinline preload="metadata" poster="assets/og-card.png">
-          <source src="assets/video/showcase-2min.mp4" type="video/mp4" />
-        </video>
+        <video id="player" class="hidden" controls playsinline preload="none" poster="assets/og-card.png"></video>
         <div id="fallback" class="fallback" role="status">
           <strong>Checking showcase video…</strong>
           <p>Looking for <span class="mono">docs/assets/video/showcase-2min.mp4</span>.</p>
@@ -454,6 +449,10 @@
       var fallback = document.getElementById("fallback");
 
       function showPlayer() {
+        if (!player.getAttribute("src")) {
+          player.setAttribute("src", VIDEO);
+          player.setAttribute("preload", "metadata");
+        }
         fallback.classList.add("hidden");
         player.classList.remove("hidden");
       }
@@ -509,6 +508,7 @@
         });
       }
       player.addEventListener("timeupdate", syncBeats);
+      player.addEventListener("seeked", syncBeats);
       player.addEventListener("play", syncBeats);
     })();
   </script>
