@@ -26,6 +26,21 @@ Handoffs are visible in the group room. Notion/GitHub are the source of truth. T
 
 Most “multi-agent” demos are six ChatGPT tabs with a human as the router. This kit shows the opposite:
 
+```mermaid
+quadrantChart
+    title Where the work actually lives
+    x-axis Chat tabs --> Shared SoT
+    y-axis Human as router --> Bots own handoffs
+    quadrant-1 Spec-to-Ship (this kit)
+    quadrant-2 Fragile autonomy
+    quadrant-3 Six chat tabs
+    quadrant-4 Manual pipelines
+    "Six ChatGPT tabs": [0.18, 0.22]
+    "One mega-agent": [0.35, 0.55]
+    "Zapier-style pipeline": [0.62, 0.28]
+    "Grok Bot Spec-to-Ship": [0.82, 0.86]
+```
+
 | One chatbot / one agent | This kit |
 |-------------------------|----------|
 | You paste context between tabs | Bots `@` each other with owner + DoD |
@@ -36,6 +51,16 @@ Most “multi-agent” demos are six ChatGPT tabs with a human as the router. Th
 Built for the **Grok Bot Hackathon** (X Philippines): one real task, public/non-sensitive data, public GitHub, ≥1 Grok Bot.
 
 ## What's in the box
+
+```mermaid
+pie showData
+    title Kit surface area
+    "bots/ profiles" : 5
+    "protocol rules" : 1
+    "templates" : 2
+    "live-run proof" : 6
+    "demo + Pages" : 2
+```
 
 | Path | Deliverable |
 |------|-------------|
@@ -57,6 +82,19 @@ Built for the **Grok Bot Hackathon** (X Philippines): one real task, public/non-
 
 Present from **[Pages](https://iron-mark.github.io/grok-bot-spec-to-ship/) + the group room** — not a slide deck.
 
+```mermaid
+gantt
+    title Showcase cut (≈2 min)
+    dateFormat  mm:ss
+    axisFormat  %M:%S
+    section Beats
+    Objective in group room           :a1, 00:00, 20s
+    Visible @ handoffs                :a2, after a1, 30s
+    README + bots/ + Pages hero       :a3, after a2, 30s
+    examples/live-run/ proof          :a4, after a3, 25s
+    PR trail + protocol as product    :a5, after a4, 15s
+```
+
 | Time | Beat |
 |------|------|
 | **0:00** | Mark: one objective in the group |
@@ -67,22 +105,20 @@ Present from **[Pages](https://iron-mark.github.io/grok-bot-spec-to-ship/) + the
 
 Full script: [`demo/SCRIPT.md`](demo/SCRIPT.md) · Presenter cues: [`examples/live-run/06-presenter-cues.md`](examples/live-run/06-presenter-cues.md)
 
-**Video:** drop your recording at `docs/assets/video/showcase-2min.mp4` (shot list in [`docs/assets/ASSETS.md`](docs/assets/ASSETS.md)).
+**Video:** `docs/assets/video/showcase-2min.mp4` (shot list in [`docs/assets/ASSETS.md`](docs/assets/ASSETS.md)).
 
 ## How the crew works
 
-```
-Human (judgment only)
-    ↓
-Orchestrator — plan once, assign, pack escalations
-    ↓
-Researcher + Product Design  (parallel when DoDs don’t collide)
-    ↓
-Engineer — public PR / repo
-    ↓
-Reviewer — one pass vs SoT
-    ↓
-Orchestrator → Human only for irreversible / preference calls
+```mermaid
+flowchart TD
+    H[Human — judgment only] --> O[Orchestrator\nplan once · assign · escalate]
+    O --> R[Researcher]
+    O --> P[Product Design]
+    R --> E[Engineer\npublic PR / repo]
+    P --> E
+    E --> V[Reviewer\none pass vs SoT]
+    V --> O
+    O -->|irreversible / preference| H
 ```
 
 Rules that keep the room useful: **one owner, one deliverable, one SoT, one DoD** per task. Room posts = assignment / handoff / blocker / verdict only. Full protocol: [`protocol/operating-rules.md`](protocol/operating-rules.md).
@@ -90,6 +126,15 @@ Rules that keep the room useful: **one owner, one deliverable, one SoT, one DoD*
 ## Live-run proof
 
 This repo *is* the first Spec-to-Ship:
+
+```mermaid
+flowchart LR
+    A[01 Capabilities] --> B[02 One-pager]
+    B --> C[03 Decisions]
+    C --> D[04 Sources]
+    D --> E[05 Reviewer PASS]
+    E --> F[06 Presenter cues]
+```
 
 1. [Capabilities](examples/live-run/01-capabilities.md) — confirmed Grok Bot facts
 2. [Product one-pager](examples/live-run/02-product-one-pager.md)
