@@ -3,85 +3,514 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>grok-bot-spec-to-ship — Grok Bot Spec-to-Ship kit</title>
+  <title>grok-bot-spec-to-ship — not six chat tabs</title>
   <meta name="description" content="Open kit + live proof that a Grok Bot group can take a vague objective to a shipped public repo without the human as router." />
   <meta property="og:title" content="grok-bot-spec-to-ship" />
-  <meta property="og:description" content="Not six chat tabs. An AI team that ships." />
+  <meta property="og:description" content="Spec → research → PRD → shipped PR. Not six chat tabs." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://iron-mark.github.io/grok-bot-spec-to-ship/" />
-  <meta property="og:image" content="https://iron-mark.github.io/grok-bot-spec-to-ship/assets/og-card.svg" />
+  <meta property="og:image" content="https://iron-mark.github.io/grok-bot-spec-to-ship/assets/og-card.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://iron-mark.github.io/grok-bot-spec-to-ship/assets/og-card.svg" />
+  <meta name="twitter:image" content="https://iron-mark.github.io/grok-bot-spec-to-ship/assets/og-card.png" />
   <link rel="icon" href="assets/hero-handoff.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    :root { --bg:#0b0c0f; --fg:#f4f4f5; --muted:#a1a1aa; --card:#14151a; --line:#27272a; --accent:#a78bfa; }
+    :root {
+      --bg: #07080b;
+      --bg-2: #0c0e13;
+      --fg: #f4f5ef;
+      --muted: #9aa394;
+      --line: #1b1e26;
+      --lime: #c4f542;
+      --lime-ink: #101600;
+      --magenta: #e84aa8;
+      --cyan: #5ce1e6;
+      --violet: #9b7dff;
+      --display: "Syne", ui-sans-serif, sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, monospace;
+      --max: 1120px;
+    }
     * { box-sizing: border-box; }
-    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background:var(--bg); color:var(--fg); line-height:1.5; }
-    .hero-wrap { background:#0f0f14; border-bottom:1px solid var(--line); }
-    .hero { width:100%; height:clamp(200px,32vw,340px); object-fit:cover; object-position:center; display:block; }
-    main { max-width:720px; margin:0 auto; padding:2rem 1.25rem 4rem; }
-    h1 { font-size:clamp(1.75rem,4vw,2.35rem); letter-spacing:-0.03em; margin:0 0 0.75rem; }
-    .tag { display:inline-block; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--accent); margin-bottom:1rem; }
-    .lede { color:var(--muted); font-size:1.1rem; margin:0 0 1.75rem; }
-    .actions { display:flex; flex-wrap:wrap; gap:0.75rem; margin-bottom:2rem; }
-    a.btn { display:inline-block; padding:0.7rem 1rem; border-radius:0.6rem; text-decoration:none; font-weight:600; border:1px solid var(--line); color:var(--fg); background:var(--card); }
-    a.btn.primary { background:var(--accent); color:#0b0c0f; border-color:transparent; }
-    section { border:1px solid var(--line); background:var(--card); border-radius:0.9rem; padding:1.1rem 1.2rem; margin-bottom:1rem; }
-    section h2 { margin:0 0 0.5rem; font-size:1rem; }
-    ul { margin:0; padding-left:1.1rem; color:var(--muted); }
-    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:0.92em; }
-    .video-slot { margin:0 0 2rem; border:1px dashed var(--line); border-radius:0.9rem; padding:1rem; background:#101114; color:var(--muted); font-size:0.95rem; }
-    .video-slot video { width:100%; border-radius:0.6rem; display:block; background:#000; }
-    footer { margin-top:2rem; color:var(--muted); font-size:0.9rem; }
-    footer a { color:var(--accent); }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--mono);
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 100dvh;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(900px 420px at 80% -10%, rgba(155,125,255,.16), transparent 60%),
+        radial-gradient(700px 380px at -10% 20%, rgba(92,225,230,.07), transparent 55%),
+        linear-gradient(rgba(196,245,66,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(155,125,255,.04) 1px, transparent 1px);
+      background-size: auto, auto, 56px 56px, 56px 56px;
+    }
+    a { color: var(--lime); }
+    a:focus-visible, button:focus-visible, video:focus-visible {
+      outline: 2px solid var(--lime);
+      outline-offset: 3px;
+    }
+    .skip {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      background: var(--lime);
+      color: var(--lime-ink);
+      padding: .6rem 1rem;
+      z-index: 20;
+    }
+    .skip:focus { left: 1rem; top: 1rem; }
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+    header.rail {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .wordmark { color: var(--fg); text-decoration: none; font-weight: 500; }
+    .wordmark span { color: var(--lime); }
+    nav { display: flex; flex-wrap: wrap; gap: .15rem .9rem; }
+    nav a { color: var(--muted); text-decoration: none; }
+    nav a:hover { color: var(--fg); }
+    .hero-band {
+      margin: 0 -1.25rem;
+      position: relative;
+      border-bottom: 1px solid var(--line);
+      background: #05060a;
+    }
+    @media (min-width: 1120px) {
+      .hero-band { margin: 0; border: 1px solid var(--line); border-top: none; }
+    }
+    .hero-band img {
+      display: block;
+      width: 100%;
+      height: clamp(220px, 42vw, 520px);
+      object-fit: cover;
+      object-position: center top;
+    }
+    .hero-band::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 72px;
+      background: linear-gradient(transparent, var(--bg));
+      pointer-events: none;
+    }
+    .intro { padding: 2.2rem 0 1.4rem; }
+    .kicker {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      color: var(--lime);
+      font-size: 11px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .kicker i {
+      display: block;
+      width: 42px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--magenta), var(--cyan));
+    }
+    h1 {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(2.4rem, 7vw, 4.6rem);
+      line-height: .92;
+      letter-spacing: -.045em;
+      margin: 0 0 1rem;
+    }
+    .lede {
+      max-width: 52ch;
+      color: var(--muted);
+      font-size: 1rem;
+      margin: 0 0 1.6rem;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: .7rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: .7rem 1.05rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: .04em;
+      border: 1px solid var(--line);
+      background: var(--bg-2);
+      color: var(--fg);
+      cursor: pointer;
+      transition: background .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;
+    }
+    .btn:hover { border-color: var(--muted); transform: translateY(-1px); }
+    .btn.primary {
+      background: var(--lime);
+      color: var(--lime-ink);
+      border-color: var(--lime);
+    }
+    .btn.primary:hover { filter: brightness(1.05); }
+    .stage {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr;
+      gap: 1.25rem;
+      margin: 1.5rem 0 2.4rem;
+      align-items: start;
+    }
+    .monitor {
+      border: 1px solid var(--line);
+      background: #050608;
+      position: relative;
+    }
+    .monitor-chrome {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .55rem .8rem;
+      border-bottom: 1px solid var(--line);
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .dots { display: flex; gap: 6px; }
+    .dots span { width: 7px; height: 7px; border-radius: 50%; background: #2a2e38; }
+    .dots span:first-child { background: var(--magenta); }
+    .dots span:nth-child(2) { background: var(--lime); }
+    .dots span:nth-child(3) { background: var(--cyan); }
+    video {
+      width: 100%;
+      display: block;
+      background: #000;
+      aspect-ratio: 16 / 9;
+    }
+    .fallback {
+      aspect-ratio: 16 / 9;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: .6rem;
+      padding: 1.5rem;
+      background:
+        linear-gradient(180deg, rgba(7,8,11,.2), rgba(7,8,11,.85)),
+        url("assets/og-card.png") center / cover no-repeat;
+      color: var(--fg);
+    }
+    .fallback strong {
+      font-family: var(--display);
+      font-size: 1.6rem;
+      letter-spacing: -.03em;
+    }
+    .fallback p { margin: 0; color: #d7dbd0; max-width: 46ch; }
+    .mono { font-family: var(--mono); }
+    .beats {
+      border: 1px solid var(--line);
+      background: var(--bg-2);
+    }
+    .beats h2 {
+      margin: 0;
+      padding: .7rem .9rem;
+      border-bottom: 1px solid var(--line);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    ol.film {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    ol.film li {
+      display: grid;
+      grid-template-columns: 4.4rem 1fr;
+      gap: .6rem;
+      padding: .85rem .9rem;
+      border-bottom: 1px solid var(--line);
+    }
+    ol.film li:last-child { border-bottom: 0; }
+    ol.film time {
+      color: var(--lime);
+      font-size: 12px;
+      font-variant-numeric: tabular-nums;
+    }
+    ol.film b {
+      display: block;
+      font-family: var(--display);
+      font-size: 1.02rem;
+      font-weight: 700;
+      letter-spacing: -.02em;
+    }
+    ol.film span { color: var(--muted); font-size: 12px; }
+    ol.film li.active {
+      background: rgba(196,245,66,.06);
+      box-shadow: inset 3px 0 0 var(--lime);
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+    section.panel {
+      border: 1px solid var(--line);
+      background: rgba(12,14,19,.72);
+      padding: 1.15rem 1.2rem 1.25rem;
+    }
+    section.panel h2 {
+      font-family: var(--display);
+      font-size: 1.35rem;
+      margin: 0 0 .85rem;
+      letter-spacing: -.03em;
+    }
+    dl.spec { margin: 0; }
+    dl.spec div {
+      display: grid;
+      grid-template-columns: 7.5rem 1fr;
+      gap: .6rem;
+      padding: .45rem 0;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+    }
+    dl.spec dt { color: var(--lime); }
+    dl.spec dd { margin: 0; color: var(--muted); }
+    ul.ticks { margin: 0; padding: 0; list-style: none; }
+    ul.ticks li {
+      padding: .45rem 0 .45rem 1.2rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      position: relative;
+    }
+    ul.ticks li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .85rem;
+      width: 8px;
+      height: 8px;
+      background: var(--lime);
+    }
+    footer.site {
+      border-top: 1px solid var(--line);
+      padding: 1.4rem 0 2.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem 1.2rem;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    footer.site a { color: var(--muted); }
+    footer.site a:hover { color: var(--lime); }
+    .hidden { display: none !important; }
+    @media (max-width: 860px) {
+      .stage, .grid-2 { grid-template-columns: 1fr; }
+      header.rail { align-items: flex-start; flex-direction: column; gap: .6rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn { transition: none; }
+    }
   </style>
 </head>
 <body>
-  <div class="hero-wrap">
-    <img class="hero" src="assets/hero-handoff.svg" alt="Five specialized Grok Bots collaborating as a constellation" />
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header class="rail">
+      <a class="wordmark" href="https://iron-mark.github.io/grok-bot-spec-to-ship/">grok-bot-<span>spec-to-ship</span></a>
+      <nav aria-label="Primary">
+        <a href="https://github.com/Iron-Mark/grok-bot-spec-to-ship">Repo</a>
+        <a href="https://github.com/Iron-Mark/grok-bot-spec-to-ship/blob/main/demo/SCRIPT.md">Script</a>
+        <a href="https://github.com/Iron-Mark/grok-bot-spec-to-ship/tree/main/examples/live-run">Live-run</a>
+        <a href="#showcase">Video</a>
+      </nav>
+    </header>
   </div>
-  <main>
-    <div class="tag">Grok Bot Hackathon · Spec-to-Ship</div>
-    <h1>Not six chat tabs.<br />An AI team that ships.</h1>
-    <p class="lede">Open kit + live proof that a Grok Bot group can take a vague objective → research → PRD → public repo without the human as router.</p>
-    <div class="actions">
-      <a class="btn primary" href="https://github.com/Iron-Mark/grok-bot-spec-to-ship">Public repo</a>
-      <a class="btn" href="https://github.com/Iron-Mark/grok-bot-spec-to-ship/blob/main/demo/SCRIPT.md">2-min demo script</a>
-      <a class="btn" href="https://github.com/Iron-Mark/grok-bot-spec-to-ship/tree/main/examples/live-run">Live-run proof</a>
+
+  <div class="hero-band">
+    <img
+      src="assets/hero-handoff.png"
+      alt="Five specialized Grok Bots in a linear handoff: Orchestrator, Researcher, Product Design, Engineer, Reviewer — not six chat tabs."
+      width="1280"
+      height="720"
+      onerror="this.onerror=null;this.src='assets/hero-handoff.svg'"
+    />
+  </div>
+
+  <main id="main" class="wrap">
+    <div class="intro">
+      <div class="kicker"><i></i> Grok Bot Hackathon · Spec-to-Ship</div>
+      <h1>Not six chat tabs.<br />An AI team that ships.</h1>
+      <p class="lede">Open kit + live proof that a Grok Bot group can take a vague objective → research → PRD → public repo without the human as router. Notion and GitHub are the source of truth. The PR trail is the demo.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://github.com/Iron-Mark/grok-bot-spec-to-ship">Public repo</a>
+        <a class="btn" href="https://github.com/Iron-Mark/grok-bot-spec-to-ship/blob/main/demo/SCRIPT.md">2-min demo script</a>
+        <a class="btn" href="https://github.com/Iron-Mark/grok-bot-spec-to-ship/tree/main/examples/live-run">Live-run proof</a>
+      </div>
     </div>
-    <div class="video-slot">
-      <strong style="color:var(--fg)">Showcase video</strong>
-      <p style="margin:0.4rem 0 0.8rem">Drop <span class="mono">docs/assets/video/showcase-2min.mp4</span> to go live here.</p>
-      <video controls playsinline poster="assets/og-card.svg">
-        <source src="assets/video/showcase-2min.mp4" type="video/mp4" />
-      </video>
+
+    <div class="stage" id="showcase">
+      <div class="monitor">
+        <div class="monitor-chrome">
+          <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
+          <span>showcase-2min.mp4</span>
+        </div>
+        <video id="player" class="hidden" controls playsinline preload="metadata" poster="assets/og-card.png">
+          <source src="assets/video/showcase-2min.mp4" type="video/mp4" />
+        </video>
+        <div id="fallback" class="fallback" role="status">
+          <strong>Checking showcase video…</strong>
+          <p>Looking for <span class="mono">docs/assets/video/showcase-2min.mp4</span>.</p>
+        </div>
+      </div>
+      <aside class="beats">
+        <h2>Storyboard · 0:00 → 1:45</h2>
+        <ol class="film" id="beats">
+          <li data-start="0" data-end="20">
+            <time datetime="T00:00">0:00</time>
+            <div><b>One objective</b><span>Paste the kit goal. Orchestrator plans once.</span></div>
+          </li>
+          <li data-start="20" data-end="50">
+            <time datetime="T00:20">0:20</time>
+            <div><b>@ handoffs</b><span>Owner / deliverable / SoT / DoD, then stop.</span></div>
+          </li>
+          <li data-start="50" data-end="80">
+            <time datetime="T00:50">0:50</time>
+            <div><b>README + bots</b><span>Paste-ready profiles in <span class="mono">bots/</span>.</span></div>
+          </li>
+          <li data-start="80" data-end="105">
+            <time datetime="T01:20">1:20</time>
+            <div><b>Live-run</b><span><span class="mono">examples/live-run/</span> is the trail.</span></div>
+          </li>
+          <li data-start="105" data-end="999">
+            <time datetime="T01:45">1:45</time>
+            <div><b>PR trail</b><span>Protocol as product — not six chat tabs.</span></div>
+          </li>
+        </ol>
+      </aside>
     </div>
-    <section>
-      <h2>What’s in the kit</h2>
-      <ul>
-        <li><span class="mono">bots/</span> — paste-ready profiles</li>
-        <li><span class="mono">protocol/operating-rules.md</span> — ownership / handoff / anti-loop</li>
-        <li><span class="mono">examples/live-run/</span> — this crew’s trail</li>
-        <li><span class="mono">demo/SCRIPT.md</span> — Showcase cut</li>
-        <li><span class="mono">docs/assets/</span> — hero, OG, video slot</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Venue fit</h2>
-      <ul>
-        <li>One real task · Public / non-sensitive · Public GitHub repo · ≥1 Grok Bot</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Present from here</h2>
-      <ul>
-        <li>0:00 objective → 0:20 <span class="mono">@</span> handoffs → 0:50 README → 1:20 live-run → 1:45 PR + protocol</li>
-      </ul>
-    </section>
-    <footer>
-      MIT · <a href="https://github.com/Iron-Mark/grok-bot-spec-to-ship">Iron-Mark/grok-bot-spec-to-ship</a>
-      · <a href="https://iron-mark.github.io/grok-bot-spec-to-ship/">Pages</a>
+
+    <div class="grid-2">
+      <section class="panel">
+        <h2>What’s in the kit</h2>
+        <dl class="spec">
+          <div><dt>bots/</dt><dd>Paste-ready Orchestrator, Researcher, Product Design, Engineer, Reviewer.</dd></div>
+          <div><dt>protocol/</dt><dd>Ownership, handoff, anti-loop, escalation, completion.</dd></div>
+          <div><dt>templates/</dt><dd>Notion + GitHub issue / PR checklist.</dd></div>
+          <div><dt>live-run/</dt><dd>This crew’s capabilities → one-pager → Reviewer pass.</dd></div>
+          <div><dt>demo/</dt><dd>Showcase cut in SCRIPT.md — present from Pages + the room.</dd></div>
+        </dl>
+      </section>
+      <section class="panel">
+        <h2>Venue fit</h2>
+        <ul class="ticks">
+          <li>One real task: ship this public kit.</li>
+          <li>Public / non-sensitive — MIT, no secrets.</li>
+          <li>Public GitHub repo with a PR trail.</li>
+          <li>≥1 Grok Bot — this crew is five, with visible <span class="mono">@</span> lanes.</li>
+        </ul>
+      </section>
+    </div>
+
+    <footer class="site">
+      <span>MIT · Public · Iron-Mark/grok-bot-spec-to-ship</span>
+      <span>
+        <a href="https://github.com/Iron-Mark/grok-bot-spec-to-ship">GitHub</a>
+        · <a href="https://iron-mark.github.io/grok-bot-spec-to-ship/">Pages</a>
+        · <a href="https://github.com/Iron-Mark/grok-bot-spec-to-ship/blob/main/demo/SCRIPT.md">SCRIPT</a>
+      </span>
     </footer>
   </main>
+
+  <script>
+    (function () {
+      var VIDEO = "assets/video/showcase-2min.mp4";
+      var player = document.getElementById("player");
+      var fallback = document.getElementById("fallback");
+
+      function showPlayer() {
+        fallback.classList.add("hidden");
+        player.classList.remove("hidden");
+      }
+
+      function showMissing(detail) {
+        player.classList.add("hidden");
+        fallback.classList.remove("hidden");
+        fallback.innerHTML =
+          "<strong>Showcase video missing</strong>" +
+          "<p>Expected file <span class=\"mono\">docs/assets/video/showcase-2min.mp4</span> is not on Pages." +
+          (detail ? " (" + detail + ")" : "") +
+          " Drop Mark’s live-room recording there to replace this storyboard clip.</p>";
+      }
+
+      function looksLikeVideo(res) {
+        if (!res.ok && res.status !== 206) return false;
+        var len = res.headers.get("content-length");
+        if (len === "0") return false;
+        var ct = (res.headers.get("content-type") || "").toLowerCase();
+        if (ct.indexOf("text/html") !== -1) return false;
+        return true;
+      }
+
+      function probe() {
+        return fetch(VIDEO, { method: "HEAD", cache: "no-store" }).then(function (res) {
+          if (res.status === 405 || res.status === 501) {
+            return fetch(VIDEO, {
+              method: "GET",
+              headers: { Range: "bytes=0-0" },
+              cache: "no-store"
+            });
+          }
+          return res;
+        });
+      }
+
+      probe()
+        .then(function (res) {
+          if (looksLikeVideo(res)) showPlayer();
+          else showMissing("HTTP " + res.status);
+        })
+        .catch(function () {
+          showMissing("network error");
+        });
+
+      var beats = Array.prototype.slice.call(document.querySelectorAll("#beats li"));
+      function syncBeats() {
+        var t = player.currentTime || 0;
+        beats.forEach(function (li) {
+          var a = Number(li.getAttribute("data-start"));
+          var b = Number(li.getAttribute("data-end"));
+          li.classList.toggle("active", t >= a && t < b);
+        });
+      }
+      player.addEventListener("timeupdate", syncBeats);
+      player.addEventListener("play", syncBeats);
+    })();
+  </script>
 </body>
 </html>

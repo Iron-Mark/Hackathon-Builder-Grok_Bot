@@ -1,7 +1,5 @@
 # Showcase video
 
-Drop Mark’s 2-minute recording here as:
+`showcase-2min.mp4` on this path is the **storyboard clip** (ken-burns stills + beat cards) so GitHub Pages has a working player.
 
-`showcase-2min.mp4`
-
-Then wire it in `docs/index.html` (video tag already reserved).
+Mark can replace it later with a live room recording — keep the filename.
