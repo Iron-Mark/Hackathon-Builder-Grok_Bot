@@ -4,6 +4,8 @@ Open kit + live proof that a **Grok Bot group** can take a vague objective → r
 
 This is not six chat tabs. Handoffs are visible in the group room; Notion/GitHub are the source of truth; the PR trail is the demo.
 
+**Live Pages (after enable):** https://iron-mark.github.io/grok-bot-spec-to-ship/
+
 ## What's in the box
 
 | Path | Deliverable |
@@ -12,18 +14,19 @@ This is not six chat tabs. Handoffs are visible in the group room; Notion/GitHub
 | `protocol/operating-rules.md` | Ownership, handoff, anti-loop, escalation, completion |
 | `templates/` | Notion + GitHub templates (research DB, PRD, decision log, PR checklist) |
 | `examples/live-run/` | Artifacts from this crew's first Spec-to-Ship |
-| `demo/SCRIPT.md` | 2–5 minute demo script |
+| `demo/SCRIPT.md` | 2-minute Showcase demo script |
+| `docs/` | GitHub Pages landing |
 
 ## Quick start
 
 1. Create five Grok Bots; paste each file from `bots/` into the Bot description.
 2. Create a group chat with those five Bots.
-3. Paste the kickoff from `demo/SCRIPT.md` (or the kickoff block in that file).
+3. Paste the kickoff from `demo/SCRIPT.md`.
 4. Watch: plan once → `@` lanes → research/PRD → public PR → one Reviewer pass → one human judgment.
 
-## Demo (2–5 min)
+## Demo (2 min)
 
-See [`demo/SCRIPT.md`](demo/SCRIPT.md). Viewer should leave thinking: *this is an AI team operating together*.
+See [`demo/SCRIPT.md`](demo/SCRIPT.md). Present from Pages + the group room — not a slide deck.
 
 ## License
 

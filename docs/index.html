@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>grok-bot-spec-to-ship — Grok Bot Spec-to-Ship kit</title>
+  <meta name="description" content="Open kit + live proof that a Grok Bot group can take a vague objective to a shipped public repo without the human as router." />
+  <style>
+    :root {
+      --bg: #0b0c0f;
+      --fg: #f4f4f5;
+      --muted: #a1a1aa;
+      --card: #14151a;
+      --line: #27272a;
+      --accent: #a78bfa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.5;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+    h1 { font-size: clamp(1.75rem, 4vw, 2.35rem); letter-spacing: -0.03em; margin: 0 0 0.75rem; }
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .lede { color: var(--muted); font-size: 1.1rem; margin: 0 0 1.75rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2.5rem; }
+    a.btn {
+      display: inline-block;
+      padding: 0.7rem 1rem;
+      border-radius: 0.6rem;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid var(--line);
+      color: var(--fg);
+      background: var(--card);
+    }
+    a.btn.primary { background: var(--accent); color: #0b0c0f; border-color: transparent; }
+    section {
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 0.9rem;
+      padding: 1.1rem 1.2rem;
+      margin-bottom: 1rem;
+    }
+    section h2 { margin: 0 0 0.5rem; font-size: 1rem; }
+    ul { margin: 0; padding-left: 1.1rem; color: var(--muted); }
+    code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.92em; }
+    footer { margin-top: 2rem; color: var(--muted); font-size: 0.9rem; }
+    footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="tag">Grok Bot Hackathon · Spec-to-Ship</div>
+    <h1>Not six chat tabs.<br />An AI team that ships.</h1>
+    <p class="lede">Open kit + live proof that a Grok Bot group can take a vague objective → research → PRD → public repo without the human as router.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/Iron-Mark/grok-bot-spec-to-ship">Public repo</a>
+      <a class="btn" href="https://github.com/Iron-Mark/grok-bot-spec-to-ship/blob/main/demo/SCRIPT.md">2-min demo script</a>
+      <a class="btn" href="https://github.com/Iron-Mark/grok-bot-spec-to-ship/tree/main/examples/live-run">Live-run proof</a>
+    </div>
+
+    <section>
+      <h2>What’s in the kit</h2>
+      <ul>
+        <li><span class="mono">bots/</span> — paste-ready Orchestrator, Researcher, Product Design, Engineer, Reviewer</li>
+        <li><span class="mono">protocol/operating-rules.md</span> — ownership, handoff, anti-loop, escalation</li>
+        <li><span class="mono">templates/</span> — Notion + GitHub SoT stubs</li>
+        <li><span class="mono">examples/live-run/</span> — this crew’s trail (capabilities → Reviewer pass)</li>
+        <li><span class="mono">demo/SCRIPT.md</span> — Showcase cut</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Venue fit</h2>
+      <ul>
+        <li>One real task (Spec-to-Ship)</li>
+        <li>Public / non-sensitive only</li>
+        <li>Results in a public GitHub repo</li>
+        <li>≥1 Grok Bot (five specialized Bots + group orchestration)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Present from here</h2>
+      <ul>
+        <li>0:00 — one Mark objective in the group room</li>
+        <li>0:20 — visible <span class="mono">@</span> handoffs</li>
+        <li>0:50 — README + <span class="mono">bots/</span></li>
+        <li>1:20 — <span class="mono">examples/live-run/</span></li>
+        <li>1:45 — PR trail + protocol as the product</li>
+      </ul>
+    </section>
+
+    <footer>
+      MIT · <a href="https://github.com/Iron-Mark/grok-bot-spec-to-ship">Iron-Mark/grok-bot-spec-to-ship</a>
+    </footer>
+  </main>
+</body>
+</html>
