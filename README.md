@@ -105,7 +105,7 @@ gantt
 
 Full script: [`demo/SCRIPT.md`](demo/SCRIPT.md) · Presenter cues: [`examples/live-run/06-presenter-cues.md`](examples/live-run/06-presenter-cues.md)
 
-**Video:** `docs/assets/video/showcase-2min.mp4` (shot list in [`docs/assets/ASSETS.md`](docs/assets/ASSETS.md)).
+**Video:** storyboard cut at [`docs/assets/video/showcase-2min.mp4`](docs/assets/video/showcase-2min.mp4) (shot list in [`docs/assets/ASSETS.md`](docs/assets/ASSETS.md)). Plays on [Pages](https://iron-mark.github.io/grok-bot-spec-to-ship/).
 
 ## How the crew works
 
