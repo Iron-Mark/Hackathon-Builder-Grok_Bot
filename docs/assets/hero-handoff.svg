@@ -1,28 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Five-node Grok Bot team constellation">
-  <rect width="1600" height="900" fill="#0b0c0f"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Grok Bot team constellation">
   <defs>
-    <radialGradient id="g" cx="50%" cy="45%" r="50%">
-      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#0b0c0f" stop-opacity="0"/>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="55%" stop-color="#0f0f14"/>
+      <stop offset="100%" stop-color="#0b0c0f"/>
     </radialGradient>
-    <filter id="blur"><feGaussianBlur stdDeviation="8"/></filter>
+    <radialGradient id="node" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ddd6fe"/>
+      <stop offset="40%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
-  <rect width="1600" height="900" fill="url(#g)"/>
-  <g stroke="#d4d4d8" stroke-width="2" fill="none" opacity="0.85">
-    <line x1="800" y1="220" x2="800" y2="450"/>
-    <line x1="800" y1="220" x2="560" y2="380"/>
-    <line x1="800" y1="220" x2="1040" y2="380"/>
-    <line x1="560" y1="380" x2="800" y2="450"/>
-    <line x1="1040" y1="380" x2="800" y2="450"/>
-    <line x1="800" y1="450" x2="620" y2="680"/>
-    <line x1="800" y1="450" x2="980" y2="680"/>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g opacity="0.15" stroke="#a78bfa" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="900"/><line x1="200" y1="0" x2="200" y2="900"/><line x1="300" y1="0" x2="300" y2="900"/><line x1="400" y1="0" x2="400" y2="900"/><line x1="500" y1="0" x2="500" y2="900"/><line x1="600" y1="0" x2="600" y2="900"/><line x1="700" y1="0" x2="700" y2="900"/><line x1="800" y1="0" x2="800" y2="900"/><line x1="900" y1="0" x2="900" y2="900"/><line x1="1000" y1="0" x2="1000" y2="900"/><line x1="1100" y1="0" x2="1100" y2="900"/><line x1="1200" y1="0" x2="1200" y2="900"/><line x1="1300" y1="0" x2="1300" y2="900"/><line x1="1400" y1="0" x2="1400" y2="900"/><line x1="1500" y1="0" x2="1500" y2="900"/>
   </g>
-  <g fill="#a78bfa" filter="url(#blur)" opacity="0.7">
-    <circle cx="800" cy="220" r="28"/><circle cx="560" cy="380" r="22"/><circle cx="1040" cy="380" r="22"/>
-    <circle cx="800" cy="450" r="34"/><circle cx="620" cy="680" r="22"/><circle cx="980" cy="680" r="22"/>
+  <g stroke="#c4b5fd" stroke-width="3" fill="none" opacity="0.95" filter="url(#glow)">
+    <line x1="800" y1="200" x2="800" y2="450"/>
+    <line x1="800" y1="200" x2="520" y2="360"/>
+    <line x1="800" y1="200" x2="1080" y2="360"/>
+    <line x1="520" y1="360" x2="800" y2="450"/>
+    <line x1="1080" y1="360" x2="800" y2="450"/>
+    <line x1="800" y1="450" x2="560" y2="700"/>
+    <line x1="800" y1="450" x2="1040" y2="700"/>
+    <line x1="520" y1="360" x2="560" y2="700"/>
+    <line x1="1080" y1="360" x2="1040" y2="700"/>
   </g>
-  <g fill="#c4b5fd">
-    <circle cx="800" cy="220" r="14"/><circle cx="560" cy="380" r="11"/><circle cx="1040" cy="380" r="11"/>
-    <circle cx="800" cy="450" r="18"/><circle cx="620" cy="680" r="11"/><circle cx="980" cy="680" r="11"/>
+  <g filter="url(#glow)">
+    <circle cx="800" cy="200" r="48" fill="url(#node)"/>
+    <circle cx="520" cy="360" r="40" fill="url(#node)"/>
+    <circle cx="1080" cy="360" r="40" fill="url(#node)"/>
+    <circle cx="800" cy="450" r="58" fill="url(#node)"/>
+    <circle cx="560" cy="700" r="40" fill="url(#node)"/>
+    <circle cx="1040" cy="700" r="40" fill="url(#node)"/>
+  </g>
+  <g fill="#f5f3ff">
+    <circle cx="800" cy="200" r="12"/>
+    <circle cx="520" cy="360" r="10"/>
+    <circle cx="1080" cy="360" r="10"/>
+    <circle cx="800" cy="450" r="16"/>
+    <circle cx="560" cy="700" r="10"/>
+    <circle cx="1040" cy="700" r="10"/>
   </g>
 </svg>
