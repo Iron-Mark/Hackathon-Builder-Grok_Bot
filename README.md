@@ -4,7 +4,7 @@ Open kit + live proof that a **Grok Bot group** can take a vague objective → r
 
 This is not six chat tabs. Handoffs are visible in the group room; Notion/GitHub are the source of truth; the PR trail is the demo.
 
-**Live Pages (after enable):** https://iron-mark.github.io/grok-bot-spec-to-ship/
+**Live Pages:** https://iron-mark.github.io/grok-bot-spec-to-ship/
 
 ## What's in the box
 
@@ -12,10 +12,10 @@ This is not six chat tabs. Handoffs are visible in the group room; Notion/GitHub
 |------|-------------|
 | `bots/` | Paste-ready Bot profiles (Orchestrator, Researcher, Product Design, Engineer, Reviewer) |
 | `protocol/operating-rules.md` | Ownership, handoff, anti-loop, escalation, completion |
-| `templates/` | Notion + GitHub templates (research DB, PRD, decision log, PR checklist) |
+| `templates/` | Notion + GitHub templates |
 | `examples/live-run/` | Artifacts from this crew's first Spec-to-Ship |
 | `demo/SCRIPT.md` | 2-minute Showcase demo script |
-| `docs/` | GitHub Pages landing |
+| `docs/` | GitHub Pages landing + `docs/assets/` (hero, OG, video slot) |
 
 ## Quick start
 
@@ -27,6 +27,8 @@ This is not six chat tabs. Handoffs are visible in the group room; Notion/GitHub
 ## Demo (2 min)
 
 See [`demo/SCRIPT.md`](demo/SCRIPT.md). Present from Pages + the group room — not a slide deck.
+
+Drop your recording at `docs/assets/video/showcase-2min.mp4`.
 
 ## License
 
