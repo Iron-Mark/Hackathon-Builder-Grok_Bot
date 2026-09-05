@@ -1,6 +1,10 @@
 # Hackathon-Builder-Grok_Bot
 
 <p align="center">
+  <img src="docs/assets/brand/mascot-purple.png" alt="Purple Grok Bot mascot — Hackathon-Builder-Grok_Bot" width="160" />
+</p>
+
+<p align="center">
   <img src="docs/assets/hero-handoff.svg" alt="Five Grok Bots handing work off — Orchestrator → Researcher → Product Design → Engineer → Reviewer" width="100%" />
 </p>
 

@@ -13,7 +13,7 @@
   <meta property="og:image" content="https://iron-mark.github.io/Hackathon-Builder-Grok_Bot/assets/og-card.svg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://iron-mark.github.io/Hackathon-Builder-Grok_Bot/assets/og-card.svg" />
-  <link rel="icon" href="assets/hero-handoff.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/brand/favicon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,560;0,9..144,700;1,9..144,500&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet" />
@@ -92,6 +92,15 @@
       width: min(var(--max), calc(100% - 2.5rem));
       margin: 0 auto;
       padding: 4.5rem 0 3rem;
+    }
+    .hero-mascot {
+      display: block;
+      width: 88px;
+      height: 88px;
+      margin: 0 0 1.15rem;
+      border-radius: 1.15rem;
+      object-fit: cover;
+      box-shadow: 0 0 0 1px rgba(167,139,250,0.28), 0 12px 32px rgba(0,0,0,0.35);
     }
     .tag {
       display: inline-flex;
@@ -293,6 +302,7 @@
   <header class="hero">
     <img class="hero-art" src="assets/hero-handoff.svg" alt="Five specialized Grok Bots collaborating as a constellation" />
     <div class="hero-inner">
+      <img class="hero-mascot" src="assets/brand/mascot-purple.png" alt="Purple Grok Bot mascot" width="88" height="88" />
       <p class="tag">Grok Bot Hackathon · Spec-to-Ship</p>
       <h1>Not six chat tabs.<br /><em>An AI team that ships.</em></h1>
       <p class="lede">Open kit + live proof that a Grok Bot group can take a vague objective → research → PRD → public repo without the human as router.</p>
