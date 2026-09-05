@@ -36,6 +36,7 @@ Handoffs are visible in the group room. Notion/GitHub are the source of truth. T
   <img src="docs/assets/pitch/crew-on-screen.jpg" alt="Gbot Builder and Product Designer agents visible during the live pitch" width="72%" />
 </p>
 
+
 <p align="center">
   <a href="https://iron-mark.github.io/Hackathon-Grok-Bot-Meetup_Manila/#demo">
     <img src="docs/assets/pitch/showcase-preview.gif" alt="12s GIF preview of the Spec-to-ship showcase storyboard — click for full video on Pages" width="720" />
