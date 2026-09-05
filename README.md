@@ -1,4 +1,4 @@
-# grok-bot-spec-to-ship
+# Hackathon-Builder-Grok_Bot
 
 <p align="center">
   <img src="docs/assets/hero-handoff.svg" alt="Five Grok Bots handing work off — Orchestrator → Researcher → Product Design → Engineer → Reviewer" width="100%" />
@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>Not six chat tabs.</strong> An AI team that ships.<br/>
-  <a href="https://iron-mark.github.io/grok-bot-spec-to-ship/">Live Pages</a> ·
+  <a href="https://iron-mark.github.io/Hackathon-Builder-Grok_Bot/">Live Pages</a> ·
   <a href="demo/SCRIPT.md">2-min demo</a> ·
   <a href="examples/live-run/">Live-run proof</a> ·
   <a href="LICENSE">MIT</a>
@@ -19,7 +19,7 @@ Open kit + live proof that a **Grok Bot group** can take a vague objective → r
 Handoffs are visible in the group room. Notion/GitHub are the source of truth. The PR trail *is* the demo.
 
 <p align="center">
-  <img src="docs/assets/og-card.svg" alt="grok-bot-spec-to-ship — Spec → research → PRD → shipped PR — MIT · Public" width="640" />
+  <img src="docs/assets/og-card.svg" alt="Hackathon-Builder-Grok_Bot — Spec → research → PRD → shipped PR — MIT · Public" width="640" />
 </p>
 
 ## Submitted & pitched
@@ -102,7 +102,7 @@ pie showData
 
 ## Demo (2 min)
 
-Present from **[Pages](https://iron-mark.github.io/grok-bot-spec-to-ship/) + the group room** — not a slide deck.
+Present from **[Pages](https://iron-mark.github.io/Hackathon-Builder-Grok_Bot/) + the group room** — not a slide deck.
 
 ```mermaid
 gantt

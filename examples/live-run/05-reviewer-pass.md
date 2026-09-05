@@ -1,7 +1,7 @@
 # Reviewer pass (live-run closed-loop)
 
 **Verdict:** PASS with gaps (non-blocking Day-1)  
-**SoT:** https://github.com/Iron-Mark/grok-bot-spec-to-ship  
+**SoT:** https://github.com/Iron-Mark/Hackathon-Builder-Grok_Bot  
 **Reviewer:** GBot Builder 01  
 **Date:** 2026-09-04
 
