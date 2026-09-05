@@ -8,7 +8,7 @@
 | `og-card.svg` / `og-card.png` | GitHub social preview / Pages OG |
 | `hero-banner.svg` / `og-cover.svg` | Alternate constellation / OG marks |
 | `video/showcase-2min.mp4` | Pages player source (`assets/video/showcase-2min.mp4` relative to `docs/`) |
-| `pitch/` | Live pitch photos (`meetup-venue.jpg`, `mark-pitch.jpg`, `crew-on-screen.jpg`) + `showcase-preview.gif` (12s storyboard preview) |
+| `pitch/` | `showcase-preview.gif` (12s storyboard preview) |
 
 ## Video shot list
 Public storyboard MP4 is committed (compressed ~85s text cards). Live-room recording can replace the same filename.
