@@ -1,4 +1,4 @@
-# Hackathon-Grok-Bot-Meetup_Manila
+# Hackathon-Builder-Grok_Bot
 
 <p align="center">
   <img src="docs/assets/hero-handoff.svg" alt="Five Grok Bots handing work off — Orchestrator → Researcher → Product Design → Engineer → Reviewer" width="100%" />
@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>Not six chat tabs.</strong> An AI team that ships.<br/>
-  <a href="https://iron-mark.github.io/Hackathon-Grok-Bot-Meetup_Manila/">Live Pages</a> ·
+  <a href="https://iron-mark.github.io/Hackathon-Builder-Grok_Bot/">Live Pages</a> ·
   <a href="demo/SCRIPT.md">2-min demo</a> ·
   <a href="examples/live-run/">Live-run proof</a> ·
   <a href="LICENSE">MIT</a>
@@ -19,14 +19,14 @@ Open kit + live proof that a **Grok Bot group** can take a vague objective → r
 Handoffs are visible in the group room. Notion/GitHub are the source of truth. The PR trail *is* the demo.
 
 <p align="center">
-  <img src="docs/assets/og-card.svg" alt="Hackathon-Grok-Bot-Meetup_Manila — Spec → research → PRD → shipped PR — MIT · Public" width="640" />
+  <img src="docs/assets/og-card.svg" alt="Hackathon-Builder-Grok_Bot — Spec → research → PRD → shipped PR — MIT · Public" width="640" />
 </p>
 
 ## Submitted & pitched
 
 > **Status:** Submitted to the Grok Bot Hackathon form (Notion confirmed receipt) and pitched live at **Grok Bot Manila Meetup** — Friday, September 4, 2026 — RealPage, X Philippines.
 >
-> Entry: Mark Szn · Demo: [Live Pages](https://iron-mark.github.io/Hackathon-Grok-Bot-Meetup_Manila/) · Repo: [Iron-Mark/Hackathon-Grok-Bot-Meetup_Manila](https://github.com/Iron-Mark/Hackathon-Grok-Bot-Meetup_Manila) · License: MIT
+> Entry: Mark Szn · Demo: [Live Pages](https://iron-mark.github.io/Hackathon-Builder-Grok_Bot/) · Repo: [Iron-Mark/Hackathon-Builder-Grok_Bot](https://github.com/Iron-Mark/Hackathon-Builder-Grok_Bot) · License: MIT
 
 <p align="center">
   <img src="docs/assets/pitch/meetup-venue.jpg" alt="Grok Bot Manila Meetup venue screens" width="48%" />
@@ -37,11 +37,11 @@ Handoffs are visible in the group room. Notion/GitHub are the source of truth. T
 </p>
 
 <p align="center">
-  <a href="https://iron-mark.github.io/Hackathon-Grok-Bot-Meetup_Manila/#demo">
+  <a href="https://iron-mark.github.io/Hackathon-Builder-Grok_Bot/#demo">
     <img src="docs/assets/pitch/showcase-preview.gif" alt="12s GIF preview of the Spec-to-ship showcase storyboard — click for full video on Pages" width="720" />
   </a>
 </p>
-<p align="center"><em>GIF preview — <a href="https://iron-mark.github.io/Hackathon-Grok-Bot-Meetup_Manila/#demo">full video on Pages</a> · <a href="docs/assets/video/showcase-2min.mp4">mp4</a></em></p>
+<p align="center"><em>GIF preview — <a href="https://iron-mark.github.io/Hackathon-Builder-Grok_Bot/#demo">full video on Pages</a> · <a href="docs/assets/video/showcase-2min.mp4">mp4</a></em></p>
 
 ## Why this exists
 
@@ -101,7 +101,7 @@ pie showData
 
 ## Demo (2 min)
 
-Present from **[Pages](https://iron-mark.github.io/Hackathon-Grok-Bot-Meetup_Manila/) + the group room** — not a slide deck.
+Present from **[Pages](https://iron-mark.github.io/Hackathon-Builder-Grok_Bot/) + the group room** — not a slide deck.
 
 ```mermaid
 gantt

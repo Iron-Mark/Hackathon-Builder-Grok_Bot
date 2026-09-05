@@ -5,4 +5,4 @@
 3. **Proof in repo:** `examples/live-run/` = this crew’s trail.
 4. **Venue:** one real task + public GitHub — we shipped both.
 
-Repo: https://github.com/Iron-Mark/Hackathon-Grok-Bot-Meetup_Manila
+Repo: https://github.com/Iron-Mark/Hackathon-Builder-Grok_Bot
