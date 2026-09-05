@@ -33,15 +33,6 @@ Handoffs are visible in the group room. Notion/GitHub are the source of truth. T
 > Entry: Mark Szn · Demo: [Live Pages](https://iron-mark.github.io/Hackathon-Builder-Grok_Bot/) · Repo: [Iron-Mark/Hackathon-Builder-Grok_Bot](https://github.com/Iron-Mark/Hackathon-Builder-Grok_Bot) · License: MIT
 
 <p align="center">
-  <img src="docs/assets/pitch/meetup-venue.jpg" alt="Grok Bot Manila Meetup venue screens" width="48%" />
-  <img src="docs/assets/pitch/mark-pitch.jpg" alt="Mark pitching Spec-to-ship with the Grok Bot crew on screen" width="48%" />
-</p>
-<p align="center">
-  <img src="docs/assets/pitch/crew-on-screen.jpg" alt="Gbot Builder and Product Designer agents visible during the live pitch" width="72%" />
-</p>
-
-
-<p align="center">
   <a href="https://iron-mark.github.io/Hackathon-Builder-Grok_Bot/#demo">
     <img src="docs/assets/pitch/showcase-preview.gif" alt="12s GIF preview of the Spec-to-ship showcase storyboard — click for full video on Pages" width="720" />
   </a>
@@ -176,7 +167,7 @@ flowchart LR
 | [`docs/assets/hero-handoff.svg`](docs/assets/hero-handoff.svg) | Pages hero + README banner |
 | [`docs/assets/og-card.svg`](docs/assets/og-card.svg) | Social / OG preview |
 | [`docs/assets/video/`](docs/assets/video/) | Showcase recording slot |
-| [`docs/assets/pitch/`](docs/assets/pitch/) | Manila meetup pitch photos + 12s GIF preview |
+| [`docs/assets/pitch/`](docs/assets/pitch/) | 12s GIF preview of the showcase storyboard |
 | [`docs/assets/ASSETS.md`](docs/assets/ASSETS.md) | Shot list + asset map |
 
 ## License
