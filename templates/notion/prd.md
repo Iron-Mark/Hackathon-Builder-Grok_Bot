@@ -79,7 +79,7 @@ Kickoff paste (group):
 @everyone Spec-to-ship live run. Objective: ship public repo Hackathon-Builder-Grok_Bot — Bot profiles, operating protocol, Notion+GitHub templates, examples/live-run/ from this run, and demo/SCRIPT.md. Orchestrator owns plan/assign. Researcher → one-pager evidence pack. Product Design → paste-ready profiles + PRD for the kit. Engineer → scaffold + PR. Reviewer → one pass on each artifact vs SoT. Room: assignment/handoff/blocker/verdict only. Mark: judgment only. Go.
 ```
 
-## SoT rules
+## SoT rules (Notion/GitHub; never chat memory)
 
 Source of truth is **Notion and/or GitHub** (and Drive when the artifact lives there). **Never chat memory.**
 
