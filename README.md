@@ -48,10 +48,10 @@ quadrantChart
     title Where the work actually lives
     x-axis Chat tabs --> Shared SoT
     y-axis Human as router --> Bots own handoffs
-    quadrant-1 Spec-to-Ship (this kit)
-    quadrant-2 Fragile autonomy
-    quadrant-3 Six chat tabs
-    quadrant-4 Manual pipelines
+    quadrant-1 "Spec-to-Ship (this kit)"
+    quadrant-2 "Fragile autonomy"
+    quadrant-3 "Six chat tabs"
+    quadrant-4 "Manual pipelines"
     "Six ChatGPT tabs": [0.18, 0.22]
     "One mega-agent": [0.35, 0.55]
     "Zapier-style pipeline": [0.62, 0.28]
