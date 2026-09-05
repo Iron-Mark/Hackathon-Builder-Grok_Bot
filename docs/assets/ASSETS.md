@@ -11,12 +11,12 @@
 | `pitch/` | `showcase-preview.gif` (12s storyboard preview) |
 
 ## Video shot list
-Public storyboard MP4 is committed (compressed ~85s text cards). Live-room recording can replace the same filename.
+Public storyboard MP4 is committed (compressed ~80s text cards). Live-room recording can replace the same filename.
 
-1. 0:00 — Objective in the group (storyboard hold ~16s)
+1. 0:00 — Mascot still + objective in the group (storyboard hold ~16s)
 2. 0:20 — Visible `@` handoffs (storyboard hold ~20s)
 3. 0:50 — README + `bots/` + Pages (storyboard hold ~18s)
-4. 1:20 — `examples/live-run/` + PR trail (storyboard hold ~16s)
-5. 1:45 — End card: protocol + repo URL + MIT (storyboard hold ~15s)
+4. 1:20 — `examples/live-run/` proof (storyboard hold ~16s)
+5. 1:45 — End card: PR trail + protocol (storyboard hold ~10s)
 
 Voice: presenter cues in `examples/live-run/06-presenter-cues.md`.
