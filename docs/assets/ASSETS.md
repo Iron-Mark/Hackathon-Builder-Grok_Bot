@@ -2,6 +2,8 @@
 
 | File | Use |
 |------|-----|
+| `brand/mascot-purple.png` | Purple Grok Bot mascot (README + Pages hero) |
+| `brand/favicon.png` | 64×64 favicon derived from the mascot |
 | `hero-handoff.svg` / `hero-handoff.png` | Pages hero + video title/B-roll |
 | `og-card.svg` / `og-card.png` | GitHub social preview / Pages OG |
 | `hero-banner.svg` / `og-cover.svg` | Alternate constellation / OG marks |
