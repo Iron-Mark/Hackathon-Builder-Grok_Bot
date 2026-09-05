@@ -22,6 +22,27 @@ Handoffs are visible in the group room. Notion/GitHub are the source of truth. T
   <img src="docs/assets/og-card.svg" alt="grok-bot-spec-to-ship — Spec → research → PRD → shipped PR — MIT · Public" width="640" />
 </p>
 
+## Submitted & pitched
+
+> **Status:** Submitted to the Grok Bot Hackathon form (Notion confirmed receipt) and pitched live at **Grok Bot Manila Meetup** — Friday, September 4, 2026 — RealPage, X Philippines.
+>
+> Entry: Mark Szn · Demo: [Live Pages](https://iron-mark.github.io/Hackathon-Builder-Grok_Bot/) · Repo: [Iron-Mark/Hackathon-Builder-Grok_Bot](https://github.com/Iron-Mark/Hackathon-Builder-Grok_Bot) · License: MIT
+
+<p align="center">
+  <img src="docs/assets/pitch/meetup-venue.jpg" alt="Grok Bot Manila Meetup venue screens" width="48%" />
+  <img src="docs/assets/pitch/mark-pitch.jpg" alt="Mark pitching Spec-to-ship with the Grok Bot crew on screen" width="48%" />
+</p>
+<p align="center">
+  <img src="docs/assets/pitch/crew-on-screen.jpg" alt="Gbot Builder and Product Designer agents visible during the live pitch" width="72%" />
+</p>
+
+<p align="center">
+  <a href="https://iron-mark.github.io/Hackathon-Builder-Grok_Bot/#demo">
+    <img src="docs/assets/pitch/showcase-preview.gif" alt="12s GIF preview of the Spec-to-ship showcase storyboard — click for full video on Pages" width="720" />
+  </a>
+</p>
+<p align="center"><em>GIF preview — <a href="https://iron-mark.github.io/Hackathon-Builder-Grok_Bot/#demo">full video on Pages</a> · <a href="docs/assets/video/showcase-2min.mp4">mp4</a></em></p>
+
 ## Why this exists
 
 Most “multi-agent” demos are six ChatGPT tabs with a human as the router. This kit shows the opposite:
@@ -69,7 +90,7 @@ pie showData
 | [`templates/`](templates/) | Notion + GitHub templates (research DB, PRD, decision log, PR checklist) |
 | [`examples/live-run/`](examples/live-run/) | Artifacts from *this* crew’s first Spec-to-Ship |
 | [`demo/SCRIPT.md`](demo/SCRIPT.md) | 2-minute Showcase cut |
-| [`docs/`](docs/) | GitHub Pages landing + [`docs/assets/`](docs/assets/) (hero, OG, video slot) |
+| [`docs/`](docs/) | GitHub Pages landing + [`docs/assets/`](docs/assets/) (hero, OG, video slot, [`pitch/`](docs/assets/pitch/)) |
 
 ## Quick start
 
@@ -150,6 +171,7 @@ flowchart LR
 | [`docs/assets/hero-handoff.svg`](docs/assets/hero-handoff.svg) | Pages hero + README banner |
 | [`docs/assets/og-card.svg`](docs/assets/og-card.svg) | Social / OG preview |
 | [`docs/assets/video/`](docs/assets/video/) | Showcase recording slot |
+| [`docs/assets/pitch/`](docs/assets/pitch/) | Manila meetup pitch photos + 12s GIF preview |
 | [`docs/assets/ASSETS.md`](docs/assets/ASSETS.md) | Shot list + asset map |
 
 ## License
